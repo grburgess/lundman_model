@@ -75,9 +75,9 @@ def read_table(table_file, eta_list, save_name, model_name, data_cut=None):
         # convert to photon space
         f_ph = f_nu[cut]/energy_range[cut]
 
-        # we cannot have zeros in the table because we interpolate in logspace
+        # add the data for this parameter value
 
-        temp_factory.add_interpolation_data(np.maximum(f_ph,1e-40),eta=entry)
+        temp_factory.add_interpolation_data(f_ph,eta=entry)
 
     # Store it
     temp_factory.save_data(overwrite=True)
