@@ -28,7 +28,7 @@ def read_table(table_file, eta_list, save_name, model_name, data_cut=None):
 
     eta = eta_list[sort_idx]
 
-
+    print eta_list
 
     
 
